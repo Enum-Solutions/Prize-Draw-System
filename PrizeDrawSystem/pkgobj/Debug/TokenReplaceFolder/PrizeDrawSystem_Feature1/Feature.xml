@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Feature xmlns="http://schemas.microsoft.com/sharepoint/" Id="1ddc9915-866f-4644-bf42-6338155c37b8" Scope="Site" Title="PrizeDrawSystem Feature1">
+  <ElementManifests>
+    <ElementManifest Location="POSMachinePrizeDraw\Elements.xml" />
+    <ElementFile Location="POSMachinePrizeDraw\POSMachinePrizeDraw.webpart" />
+    <ElementManifest Location="POSMachineUserChancesReport\Elements.xml" />
+    <ElementFile Location="POSMachineUserChancesReport\POSMachineUserChancesReport.webpart" />
+    <ElementManifest Location="ImportPOSMachineExcelDataFile\Elements.xml" />
+    <ElementFile Location="ImportPOSMachineExcelDataFile\ImportPOSMachineExcelDataFile.webpart" />
+    <ElementManifest Location="POSMachineWinnersReport\Elements.xml" />
+    <ElementFile Location="POSMachineWinnersReport\POSMachineWinnersReport.webpart" />
+    <ElementManifest Location="POSMachineWinners\Elements.xml" />
+    <ElementFile Location="POSMachineWinners\POSMachineWinners.webpart" />
+    <ElementManifest Location="ImportNewSalaryAccountExcelDataFile\Elements.xml" />
+    <ElementFile Location="ImportNewSalaryAccountExcelDataFile\ImportNewSalaryAccountExcelDataFile.webpart" />
+    <ElementManifest Location="NewSalaryAccountWinnersReport\Elements.xml" />
+    <ElementFile Location="NewSalaryAccountWinnersReport\NewSalaryAccountWinnersReport.webpart" />
+    <ElementManifest Location="NewSalaryAccountWinners\Elements.xml" />
+    <ElementFile Location="NewSalaryAccountWinners\NewSalaryAccountWinners.webpart" />
+    <ElementManifest Location="ImportBillsExcelDataFile\Elements.xml" />
+    <ElementFile Location="ImportBillsExcelDataFile\ImportBillsExcelDataFile.webpart" />
+    <ElementManifest Location="BillsPrizeDraw\Elements.xml" />
+    <ElementFile Location="BillsPrizeDraw\BillsPrizeDraw.webpart" />
+    <ElementManifest Location="BillsDrawWinners\Elements.xml" />
+    <ElementFile Location="BillsDrawWinners\BillsDrawWinners.webpart" />
+    <ElementManifest Location="BillsDrawWinnersReport\Elements.xml" />
+    <ElementFile Location="BillsDrawWinnersReport\BillsDrawWinnersReport.webpart" />
+    <ElementManifest Location="NeoSalaryAccountPrizeDraw\Elements.xml" />
+    <ElementFile Location="NeoSalaryAccountPrizeDraw\NeoSalaryAccountPrizeDraw.webpart" />
+  </ElementManifests>
+</Feature>

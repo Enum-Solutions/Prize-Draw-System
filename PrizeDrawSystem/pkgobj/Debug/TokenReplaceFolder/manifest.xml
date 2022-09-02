@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="682696a2-5683-4768-b521-5bdd83068913" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="PrizeDrawSystem.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.POSMachinePrizeDraw" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.POSMachineUserChancesReport" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.ImportPOSMachineExcelDataFile" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.POSMachineWinnersReport" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.POSMachineWinners" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.ImportNewSalaryAccountExcelDataFile" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.NewSalaryAccountWinnersReport" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.NewSalaryAccountWinners" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.ImportBillsExcelDataFile" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.BillsPrizeDraw" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.BillsDrawWinners" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.BillsDrawWinnersReport" TypeName="*" />
+        <SafeControl Assembly="PrizeDrawSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d14854d0414e8962" Namespace="PrizeDrawSystem.NeoSalaryAccountPrizeDraw" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\PrizeDrawSystem\ImportPOSMachineExcelDataFile\ImportPOSMachineExcelDataFileUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\PrizeDrawSystem\POSMachineWinnersReport\POSMachineWinnersReportUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\PrizeDrawSystem\POSMachineWinners\POSMachineWinnersUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\PrizeDrawSystem\ImportNewSalaryAccountExcelDataFile\ImportNewSalaryAccountExcelDataFileUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\PrizeDrawSystem\NewSalaryAccountWinnersReport\NewSalaryAccountWinnersReportUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\PrizeDrawSystem\NewSalaryAccountWinners\NewSalaryAccountWinnersUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\PrizeDrawSystem\ImportBillsExcelDataFile\ImportBillsExcelDataFileUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\PrizeDrawSystem\BillsDrawWinners\BillsDrawWinnersUserControl.ascx" />
+    <TemplateFile Location="CONTROLTEMPLATES\PrizeDrawSystem\BillsDrawWinnersReport\BillsDrawWinnersReportUserControl.ascx" />
+    <TemplateFile Location="Layouts\PrizeDrawSystem\WebAPI.aspx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="PrizeDrawSystem_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

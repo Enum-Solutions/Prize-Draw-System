@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F8E7917-A3B9-4439-82AC-E088D328A3E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PrizeDrawSystem</RootNamespace>
+    <AssemblyName>PrizeDrawSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\Packages\ClosedXML.Signed.0.94.2\lib\net40\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="FastMember.Signed">
+      <HintPath>..\Packages\FastMember.Signed.1.3.0\lib\net45\FastMember.Signed.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.SharePoint.Client.Runtime, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BillsDrawWinnersReport\BillsDrawWinnersReport.cs" />
+    <Compile Include="BillsDrawWinnersReport\BillsDrawWinnersReportUserControl.ascx.cs">
+      <DependentUpon>BillsDrawWinnersReportUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillsDrawWinnersReport\BillsDrawWinnersReportUserControl.ascx.designer.cs">
+      <DependentUpon>BillsDrawWinnersReportUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillsDrawWinners\BillsDrawWinners.cs" />
+    <Compile Include="BillsDrawWinners\BillsDrawWinnersUserControl.ascx.cs">
+      <DependentUpon>BillsDrawWinnersUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BillsDrawWinners\BillsDrawWinnersUserControl.ascx.designer.cs">
+      <DependentUpon>BillsDrawWinnersUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BillsPrizeDraw\BillsPrizeDraw.ascx.cs">
+      <DependentUpon>BillsPrizeDraw.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="BillsPrizeDraw\BillsPrizeDraw.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BillsPrizeDraw.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ImportBillsExcelDataFile\ImportBillsExcelDataFile.cs" />
+    <Compile Include="ImportBillsExcelDataFile\ImportBillsExcelDataFileUserControl.ascx.cs">
+      <DependentUpon>ImportBillsExcelDataFileUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportBillsExcelDataFile\ImportBillsExcelDataFileUserControl.ascx.designer.cs">
+      <DependentUpon>ImportBillsExcelDataFileUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportNewSalaryAccountExcelDataFile\ImportNewSalaryAccountExcelDataFile.cs" />
+    <Compile Include="ImportNewSalaryAccountExcelDataFile\ImportNewSalaryAccountExcelDataFileUserControl.ascx.cs">
+      <DependentUpon>ImportNewSalaryAccountExcelDataFileUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportNewSalaryAccountExcelDataFile\ImportNewSalaryAccountExcelDataFileUserControl.ascx.designer.cs">
+      <DependentUpon>ImportNewSalaryAccountExcelDataFileUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImportPOSMachineExcelDataFile\ImportPOSMachineExcelDataFile.cs" />
+    <Compile Include="ImportPOSMachineExcelDataFile\ImportPOSMachineExcelDataFileUserControl.ascx.cs">
+      <DependentUpon>ImportPOSMachineExcelDataFileUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ImportPOSMachineExcelDataFile\ImportPOSMachineExcelDataFileUserControl.ascx.designer.cs">
+      <DependentUpon>ImportPOSMachineExcelDataFileUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\PrizeDrawSystem\WebAPI.aspx.cs">
+      <DependentUpon>WebAPI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\PrizeDrawSystem\WebAPI.aspx.designer.cs">
+      <DependentUpon>WebAPI.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BillsBusinessLogic.cs" />
+    <Compile Include="Models\NewSalaryAccountBusinessLogic.cs" />
+    <Compile Include="Models\BillsExcelColumns.cs" />
+    <Compile Include="Models\BillsUser.cs" />
+    <Compile Include="Models\POSMachineBusinessLogic.cs" />
+    <Compile Include="Models\CommonOperations.cs" />
+    <Compile Include="Models\DrawResult.cs" />
+    <Compile Include="Models\NewSalaryAccountExcelColumns.cs" />
+    <Compile Include="Models\POSMachineExcelColumns.cs" />
+    <Compile Include="Models\POSMachineUser.cs" />
+    <Compile Include="Models\NewSalaryAccountUser.cs" />
+    <Compile Include="NeoSalaryAccountPrizeDraw\NeoSalaryAccountPrizeDraw.ascx.cs">
+      <DependentUpon>NeoSalaryAccountPrizeDraw.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NeoSalaryAccountPrizeDraw\NeoSalaryAccountPrizeDraw.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NeoSalaryAccountPrizeDraw.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="NewSalaryAccountWinnersReport\NewSalaryAccountWinnersReport.cs" />
+    <Compile Include="NewSalaryAccountWinnersReport\NewSalaryAccountWinnersReportUserControl.ascx.cs">
+      <DependentUpon>NewSalaryAccountWinnersReportUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewSalaryAccountWinnersReport\NewSalaryAccountWinnersReportUserControl.ascx.designer.cs">
+      <DependentUpon>NewSalaryAccountWinnersReportUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NewSalaryAccountWinners\NewSalaryAccountWinners.cs" />
+    <Compile Include="NewSalaryAccountWinners\NewSalaryAccountWinnersUserControl.ascx.cs">
+      <DependentUpon>NewSalaryAccountWinnersUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewSalaryAccountWinners\NewSalaryAccountWinnersUserControl.ascx.designer.cs">
+      <DependentUpon>NewSalaryAccountWinnersUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSMachinePrizeDraw\POSMachinePrizeDraw.ascx.cs">
+      <DependentUpon>POSMachinePrizeDraw.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="POSMachinePrizeDraw\POSMachinePrizeDraw.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSMachinePrizeDraw.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="POSMachineUserChancesReport\POSMachineUserChancesReport.ascx.cs">
+      <DependentUpon>POSMachineUserChancesReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="POSMachineUserChancesReport\POSMachineUserChancesReport.ascx.g.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>POSMachineUserChancesReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="POSMachineWinnersReport\POSMachineWinnersReport.cs" />
+    <Compile Include="POSMachineWinnersReport\POSMachineWinnersReportUserControl.ascx.cs">
+      <DependentUpon>POSMachineWinnersReportUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="POSMachineWinnersReport\POSMachineWinnersReportUserControl.ascx.designer.cs">
+      <DependentUpon>POSMachineWinnersReportUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="POSMachineWinners\POSMachineWinners.cs" />
+    <Compile Include="POSMachineWinners\POSMachineWinnersUserControl.ascx.cs">
+      <DependentUpon>POSMachineWinnersUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="POSMachineWinners\POSMachineWinnersUserControl.ascx.designer.cs">
+      <DependentUpon>POSMachineWinnersUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BillsDrawWinnersReport\BillsDrawWinnersReport.webpart" />
+    <None Include="BillsDrawWinnersReport\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{852d4ad3-6278-4a87-b208-34b8f0c46565}</SharePointProjectItemId>
+    </None>
+    <None Include="BillsDrawWinners\BillsDrawWinners.webpart" />
+    <None Include="BillsDrawWinners\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c106ba9c-1a60-4896-82d3-c6ebaa905ce1}</SharePointProjectItemId>
+    </None>
+    <None Include="BillsPrizeDraw\BillsPrizeDraw.webpart" />
+    <None Include="BillsPrizeDraw\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{9f1899c9-9270-4883-8ebc-c2c804877717}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\Feature1\Feature1.feature">
+      <FeatureId>{22ebc593-66a9-4435-b6ee-5468f2c86368}</FeatureId>
+    </None>
+    <None Include="ImportBillsExcelDataFile\ImportBillsExcelDataFile.webpart" />
+    <None Include="ImportBillsExcelDataFile\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b9170154-744b-42f4-8706-b980b8bac4a2}</SharePointProjectItemId>
+    </None>
+    <None Include="ImportNewSalaryAccountExcelDataFile\ImportNewSalaryAccountExcelDataFile.webpart" />
+    <None Include="ImportNewSalaryAccountExcelDataFile\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{03b10a7b-05fd-42bb-9861-4bbc0b325695}</SharePointProjectItemId>
+    </None>
+    <None Include="ImportPOSMachineExcelDataFile\ImportPOSMachineExcelDataFile.webpart" />
+    <None Include="ImportPOSMachineExcelDataFile\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{5459e2e8-dd2a-4d99-a96b-4a5ad214ea54}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{84165848-1fba-46fd-af44-bc16f6358e82}</SharePointProjectItemId>
+    </None>
+    <None Include="NeoSalaryAccountPrizeDraw\NeoSalaryAccountPrizeDraw.webpart" />
+    <None Include="NeoSalaryAccountPrizeDraw\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c8dd9d52-40ed-4c14-9dbe-fb0f42b7b45a}</SharePointProjectItemId>
+    </None>
+    <None Include="NewSalaryAccountWinnersReport\NewSalaryAccountWinnersReport.webpart" />
+    <None Include="NewSalaryAccountWinnersReport\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{790e2ae0-c036-409e-bd84-95347eee2ba2}</SharePointProjectItemId>
+    </None>
+    <None Include="NewSalaryAccountWinners\NewSalaryAccountWinners.webpart" />
+    <None Include="NewSalaryAccountWinners\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d07bedf3-f69f-4d69-b92a-4037376f7c88}</SharePointProjectItemId>
+    </None>
+    <None Include="Package\Package.package">
+      <PackageId>{682696a2-5683-4768-b521-5bdd83068913}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="POSMachinePrizeDraw\POSMachinePrizeDraw.webpart" />
+    <None Include="POSMachinePrizeDraw\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0c07f777-54de-42d2-a634-c715adac4abc}</SharePointProjectItemId>
+    </None>
+    <None Include="POSMachineUserChancesReport\POSMachineUserChancesReport.webpart" />
+    <None Include="POSMachineUserChancesReport\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ce0af7a1-1a42-4424-9553-90683c1f1362}</SharePointProjectItemId>
+    </None>
+    <None Include="POSMachineWinnersReport\POSMachineWinnersReport.webpart" />
+    <None Include="POSMachineWinnersReport\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{41109600-8741-40bb-b3bc-411615517125}</SharePointProjectItemId>
+    </None>
+    <None Include="POSMachineWinners\POSMachineWinners.webpart" />
+    <None Include="POSMachineWinners\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{636de08d-0b31-4cbc-8666-c39a2461cbbe}</SharePointProjectItemId>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="BillsDrawWinnersReport\BillsDrawWinnersReportUserControl.ascx" />
+    <Content Include="BillsDrawWinnersReport\Elements.xml" />
+    <Content Include="BillsDrawWinners\BillsDrawWinnersUserControl.ascx" />
+    <Content Include="BillsDrawWinners\Elements.xml" />
+    <Content Include="BillsPrizeDraw\BillsPrizeDraw.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>BillsPrizeDraw.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="BillsPrizeDraw\Elements.xml" />
+    <Content Include="Features\Feature1\Feature1.Template.xml">
+      <DependentUpon>Feature1.feature</DependentUpon>
+    </Content>
+    <Content Include="ImportBillsExcelDataFile\Elements.xml" />
+    <Content Include="ImportBillsExcelDataFile\ImportBillsExcelDataFileUserControl.ascx" />
+    <Content Include="ImportNewSalaryAccountExcelDataFile\Elements.xml" />
+    <Content Include="ImportNewSalaryAccountExcelDataFile\ImportNewSalaryAccountExcelDataFileUserControl.ascx" />
+    <Content Include="ImportPOSMachineExcelDataFile\Elements.xml" />
+    <Content Include="ImportPOSMachineExcelDataFile\ImportPOSMachineExcelDataFileUserControl.ascx" />
+    <Content Include="Layouts\PrizeDrawSystem\WebAPI.aspx" />
+    <Content Include="NeoSalaryAccountPrizeDraw\Elements.xml" />
+    <Content Include="NeoSalaryAccountPrizeDraw\NeoSalaryAccountPrizeDraw.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>NeoSalaryAccountPrizeDraw.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="NewSalaryAccountWinnersReport\Elements.xml" />
+    <Content Include="NewSalaryAccountWinnersReport\NewSalaryAccountWinnersReportUserControl.ascx" />
+    <Content Include="NewSalaryAccountWinners\Elements.xml" />
+    <Content Include="NewSalaryAccountWinners\NewSalaryAccountWinnersUserControl.ascx" />
+    <Content Include="POSMachinePrizeDraw\Elements.xml" />
+    <Content Include="POSMachinePrizeDraw\POSMachinePrizeDraw.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>POSMachinePrizeDraw.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="POSMachineUserChancesReport\Elements.xml" />
+    <Content Include="POSMachineUserChancesReport\POSMachineUserChancesReport.ascx">
+      <Generator>SharePointWebPartCodeGenerator</Generator>
+      <LastGenOutput>POSMachineUserChancesReport.ascx.g.cs</LastGenOutput>
+    </Content>
+    <Content Include="POSMachineWinnersReport\Elements.xml" />
+    <Content Include="POSMachineWinnersReport\POSMachineWinnersReportUserControl.ascx" />
+    <Content Include="POSMachineWinners\Elements.xml" />
+    <Content Include="POSMachineWinners\POSMachineWinnersUserControl.ascx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

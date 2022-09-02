@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="682696a2-5683-4768-b521-5bdd83068913" solutionId="682696a2-5683-4768-b521-5bdd83068913" resetWebServer="false" sharePointProductVersion="15.0" name="PrizeDrawSystem" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="22ebc593-66a9-4435-b6ee-5468f2c86368" />
+  </features>
+  <projectItems>
+    <projectItemReference itemId="84165848-1fba-46fd-af44-bc16f6358e82" />
+  </projectItems>
+</package>
